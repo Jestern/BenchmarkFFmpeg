@@ -73,6 +73,15 @@ def greeting():
     print('/*             with diferent compilers using ffmpeg              */')
     print('/*****************************************************************/')
 
+    try:
+        
+        import matplotlib.pyplot as plt
+        plt.rcdefaults()
+
+    except ImportError as err:
+        print('\nTo generate a graph of the stadistics you need to have installed matplotlib')
+
+
 def show_results(names, times):
     print('\nReview of the results:')
     print('Operating system: {0}'.format(platform.system_alias( \
